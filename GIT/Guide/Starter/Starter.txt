@@ -1,0 +1,108 @@
+What is GIT?
+  It is a version control system created by Linux Toolbar, the creator of Linux.
+  A version control system is a control of everything that is being worked on over time in a project.
+
+A version control system helps us build a timeline where each change in the structure of our project is recorded, like an intelligent "save as".
+  For example:
+       
+If on day 5 of your project the code was working fine, but on day 7 you have implemented changes and improvements that generated a malfunction or an error in the code, with GIT you can return to the state of your code before those changes, for example on day 5
+
+Git also allows you to work together with more people, each member can have their own version of the project and their tags will be recorded in this timeline, these changes will be called "Commit".
+
+Where can I use version control?
+Being perfect for collaborative work, it is ideal for the area of ​​programming and development.
+
+It is used by companies that sell products and services such as:
+-Facebook
+-Twitter
+-Netflix
+-Google
+-LinkIn
+
+In addition, it is also used by work teams that develop operating systems such as:
+-Microsoft
+-Android
+-LINUX
+
+Even the software that helps us create more software such as databases, frameworks, IDE'S also make use of GIT like:
+-Rails (Ruby Framework for Web development)
+-Postgres SQL (Database system)
+-Eclipse (Old IDE to create android applications)
+
+Git consists of 3 states or sections also called trees, they are the following:
+
+1) Work directory / Working Area: It is the folder where the project files are located.
+
+2) Preparation Area / Index / Staging Area: It is an intermediate area. It's a file that stores information about what's going to go in your next commit.
+
+3) Git Area / .git directory: It is the final area, it houses the last COMMIT made (that is, the current status of the project).
+
+                       Github & Gitlab
+
+They are linked to Git because they are places where they allow you to have the same as Git but public on the internet, adding a social component to share and collaborate as well as see the projects of others and receive the collaboration of others.
+
+Github and Gitlab compete with each other in the web market as version control systems.
+-----------------------------------------------
+ 
+                            Git Bash
+git congif --global user.name "Yeffry" To assign a username in your Git
+
+git config --global user.email "youremail" To associate your email with your user
+
+cd location To go to the location of the files
+
+git init To start git in a folder
+
+git status is used to ask the status of our repository, it will tell us that we are in a master branch, it will show Untracked files that will be the ones not yet uploaded to the index area
+
+git add to add a specific file
+
+git add -A To add all files in the folder
+
+git rm --cached filename To remove a file from the index area
+
+git commit -m "Description of the change" To make commits
+
+git log To review commits already created
+
+git checkout +commit number is used to select a repository to continue working on or review and will convert the selected commit to HEAD
+
+git reset --soft <id_commit>
+Leave the commit, indicated in the command, as the last one without modifying the project.
+
+git reset --hard <id_commit>
+Leave the commit, indicated in the command, as the last one, modifying the project with the characteristics of said commit.
+
+clear = It works to clear the console, it clears the data displayed on the screen and leaves it completely clear
+
+git checkout master Works to change the current HEAD, like the new MASTER. the master will always be the last commit made
+
+git branch Allows us to see the branches of a project
+
+git branch +name will allow us to create a new branch
+
+git checkout <branchname> switches us to the mentioned branch
+
+git merge <branchname> To merge the branch with the MASTER
+
+git branch <branchname> -D To remove a branch
+
+git remote add origin <repository link> Allows you to connect to the Github repository
+
+git remote -v Allows you to verify that you are connected
+
+git push -u origin master Push the repository to github, change master to specify a branch
+
+GITHUB:
+-Fork is a way to copy someone else's project respecting the legitimacy of the creator of the repository and its content, you can modify and edit your copy, that's why you made a fork, you took that from someone else with the fork and Heche pa aca!
+
+- ISSUES are problems or bugs, things to solve within a repository
+
+
+          
+
+Remember that:
+  -HEAD is the current status of your project where the last checkout was made
+  -MASTER is the last commit made
+  -WHEN CREATING a BRANCH, it is created taking into account all the commits prior to its creation
+  Also every time we make a ca
