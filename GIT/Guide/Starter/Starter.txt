@@ -1,3 +1,6 @@
+GIT COURSE
+                 -Easy Code-
+
 What is GIT?
   It is a version control system created by Linux Toolbar, the creator of Linux.
   A version control system is a control of everything that is being worked on over time in a project.
@@ -7,10 +10,10 @@ A version control system helps us build a timeline where each change in the stru
        
 If on day 5 of your project the code was working fine, but on day 7 you have implemented changes and improvements that generated a malfunction or an error in the code, with GIT you can return to the state of your code before those changes, for example on day 5
 
-Git also allows you to work together with more people, each member can have their own version of the project and their tags will be recorded in this timeline, these changes will be called "Commit".
+Git also allows you to work together with more people, each member can have their own version of the project and its tags will be recorded in this timeline, these changes will be called "Commit".
 
 Where can I use version control?
-Being perfect for collaborative work, it is ideal for the area of ​​programming and development.
+Being perfect for collaborative work, it is ideal for the programming and development area.
 
 It is used by companies that sell products and services such as:
 -Facebook
@@ -24,7 +27,7 @@ In addition, it is also used by work teams that develop operating systems such a
 -Android
 -LINUX
 
-Even the software that helps us create more software such as databases, frameworks, IDE'S also make use of GIT like:
+Even the software that helps us create more software such as databases, frameworks, IDEÂ´S also make use of GIT like:
 -Rails (Ruby Framework for Web development)
 -Postgres SQL (Database system)
 -Eclipse (Old IDE to create android applications)
@@ -39,7 +42,7 @@ Git consists of 3 states or sections also called trees, they are the following:
 
                        Github & Gitlab
 
-They are linked to Git because they are places where they allow you to have the same as Git but public on the internet, adding a social component to share and collaborate as well as see the projects of others and receive the collaboration of others.
+They are linked to Git because they are sites where they allow you to have the same thing as Git but public on the internet, adding a social component to share and collaborate as well as see the projects of others and receive the collaboration of others.
 
 Github and Gitlab compete with each other in the web market as version control systems.
 -----------------------------------------------
@@ -94,15 +97,28 @@ git remote -v Allows you to verify that you are connected
 git push -u origin master Push the repository to github, change master to specify a branch
 
 GITHUB:
--Fork is a way to copy someone else's project respecting the legitimacy of the creator of the repository and its content, you can modify and edit your copy, that's why you made a fork, you took that from someone else with the fork and Heche pa aca!
+-Fork is a way to copy someone else's project respecting the legitimacy of the creator of the repository and its content, you can modify and edit your copy, that's why you made a fork, you took that from someone else with the fork and Here you go!
 
 - ISSUES are problems or bugs, things to solve within a repository
-
-
-          
-
+         
 Remember that:
   -HEAD is the current status of your project where the last checkout was made
   -MASTER is the last commit made
   -WHEN CREATING a BRANCH, it is created taking into account all the commits prior to its creation
-  Also every time we make a ca
+  Also, every time we make a change, ask about the status of things.
+  -To merge the branches you must move to the main branch (Master) and then execute the command git merge <branchname>
+
+To move from one commit to another you must:
+ Copy the code or commit reference
+ Write the command "git checkout" followed by the commit number and then the HEAD will be put in a different repository as a starting point
+
+Remember that after git Bash shows you what has happened via the git status command you must add the file(s) to the repository in order to add the commits, then when a file has been modified you must use git add filename to add it, and then git commit -m "changedescription" to create the commit.
+
+What are branches/branches?
+ They are parallel work spaces within the same repository, a branch can be used by different people
+
+                Github & Gitlab
+
+They are linked to Git because they are sites where they allow you to have the same thing as Git but public on the internet, adding a social component to share and collaborate as well as see the projects of others and receive the collaboration of others.
+
+Github and Gitlab compete with each other in the web market as version control systems.
