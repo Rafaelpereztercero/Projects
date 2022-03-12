@@ -1,5 +1,4 @@
-GIT COURSE
-                 -Easy Code-
+
 
 What is GIT?
   It is a version control system created by Linux Toolbar, the creator of Linux.
