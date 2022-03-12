@@ -4,6 +4,7 @@ import datetime
 
 # INDICAMOS LA FECHA DE CREACIÓN
 
+
 def date():
     today = datetime.datetime.now()
     a = str(today)
@@ -18,7 +19,7 @@ def date():
     return new_date
 
 
-# INDICAMOS LA PATH DONDE QUEREMOS CREAR LA FILE
+# INDICAMOS LA PATH DONDE QUEREMOS CREAR LA FILE HA DE ACABAR EN /
 path = ""
 # DECLARAMOS LA SIGUIETEN VARIABLE PARA EMPEZAR EL WHILE
 z = "y"
@@ -84,16 +85,20 @@ def password(passwords):
 
 
 # CREAMOS UNA NUEVA FILE DENOMINADA PASS.TXT CON CODIFICACIÓN UTF-8
-f = open(path+"pass.txt", "w", encoding='utf8')
+try:
+    f = open(path+"pass.txt", "a", encoding='utf8')
+except:
+    f = open(path+"pass.txt", "w", encoding='utf8')
 # DAMOS PERMISOS DE ESCRITURA AL ARCHIVO
-f = open(path+"pass.txt", "r+", encoding='utf8')
+f = open(path+"pass.txt", "a", encoding='utf8')
 # VERIFICAMOS SI SE HA DE VOLVER A CREAR UNA PASSWORD
 while z == "y" or z == "Y":
     # INDICAMOS QUE EL RETURN DE LA FUNCTION = Z PARA COMPROBAR SI CONTINUAR O NO
     z = password(passwords)
 # RECORREMOS EL ARRAY DE PASSWORDS PARA INCREMENTAR EL CONTADOR DE PASSWORDS Y ESCRIBIRLAS DENTRO DE LA FILE
+f.write(f"PATH LOCATION : "+path+"pass.txt\n\n")
 for i in range(len(passwords)):
     timer = timer + 1
     f.write(
         f"{timer}| LENGTH = {len(passwords[i])} | User : {user} Password : {passwords[i]}\n\n")
-f.write(f"PASSWORDS GENERATED {date()}")
+f.write(f"PASSWORDS GENERATED {date()}\n\n")
