@@ -214,28 +214,14 @@ select * from (select roles.movie_id from actors,roles where actors.id = roles.a
 where act.movie_id = thurman.movie_id;
 
 # 9. Name of the directors who have not been actors in their films, sorted by code.
-select d.first_name,d.last_name
-from directors d
-inner join movies_directors m on m.director_id = d.id
-where 1 = 1
-and not exists (
-select * from roles r
-inner join actors a on a.id = r.actor_id
-where 1 = 1
-and r.movie_id = (m.movie_id)
-and lower  (a.first_name) = lower (d.first_name)
-and lower (a.last_name) = lower (d.last_name)
-)
-and not exists (
-select * from roles r
-inner join actors a on a.id = r.actor_id
-where r.movie_id is not null
-and lower(a.first_name) = lower(d.first_name)
-and lower (a.last_name) = lower(d.last_name)
-)
-group by d.first_name,d.last_name
-order by d.first_name  
-;
+SELECT CONCAT(d.first_name,' ',d.last_name) AS name
+FROM directors d
+WHERE NOT EXISTS
+(SELECT 7 FROM movies_directors md, actors a, roles r
+WHERE md.movie_id = r.movie_id AND a.id=r.actor_id
+AND md.director_id = d.id
+AND a.first_name = d.first_name
+AND a.last_name = d.last_name);
 
 #10. List of directors sorted by full name, indicating the number of films they have directed.
 select concat(dir.first_name," ",dir.last_name) as name,count(dir.movie_id) from (select  directors.first_name,directors.last_name,directors.id,movie_id from directors,movies_directors where directors.id = movies_directors.director_id) as dir
